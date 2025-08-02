@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> </title>
+  </head>
+  <body>
+    <% messages.forEach(message => { %>
+    <p>User: <%= message.user %>  </p>
+    <p>Message: <%= message.text %>  </p>
+    <p>Date: <%= message.added %>  </p>
+    <% }) %>
+    <a href="/new">New Message</a>
+  </body>
+</html>
