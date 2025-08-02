@@ -11,6 +11,7 @@
         <p><strong>User:</strong> <%= message.user %></p>
         <p><strong>Message:</strong> <%= message.text %></p>
         <p><strong>Date:</strong> <%= message.added.toLocaleString() %></p>
+      <a class="button" href="/message/<%=message.id%>">Open</a>
       </div>
     <% }) %>
     <a href="/new">New Message</a>
