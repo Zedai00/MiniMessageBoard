@@ -1,15 +1,21 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>New Message</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <h1>New Message</h1>
     <form action="/new" method="POST">
-      <lable for="user">User:</lable>
-      <input type="text" id="user" name="user">
-      <lable for="message">Message:</lable>
-      <input type="text" id="message" name="message">
+      <label for="user">User:</label>
+      <input type="text" id="user" name="user" required>
+
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message" required>
+
       <button type="submit">Send</button>
     </form>
+    <a href="/">Back</a>
   </body>
 </html>
+

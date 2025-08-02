@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %> </title>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
+    <h1><%= title %></h1>
     <% messages.forEach(message => { %>
-    <p>User: <%= message.user %>  </p>
-    <p>Message: <%= message.text %>  </p>
-    <p>Date: <%= message.added %>  </p>
+      <div class="message">
+        <p><strong>User:</strong> <%= message.user %></p>
+        <p><strong>Message:</strong> <%= message.text %></p>
+        <p><strong>Date:</strong> <%= message.added.toLocaleString() %></p>
+      </div>
     <% }) %>
     <a href="/new">New Message</a>
   </body>
 </html>
+
