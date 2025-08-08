@@ -6,11 +6,22 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <div class="message">
-      <p><strong>User:</strong> <%= message.user %></p>
-      <p><strong>Message:</strong> <%= message.text %></p>
-      <p><strong>Date:</strong> <%= message.added.toLocaleString() %></p>
+
+  <div class="message">
+    <p><strong>User:</strong> <%= message.user %></p>
+    <p><strong>Message:</strong> <%= message.text %></p>
+    <p><strong>Date:</strong> <%= message.added.toLocaleString() %></p>
+
+    <div class="message-buttons">
+      <a class="button edit" href="/message/<%= message.id %>/edit">Edit</a>
+      <form action="/message/<%= message.id %>/delete" method="POST" onsubmit="return confirm('Are you sure?')">
+        <button type="submit" class="button delete" style="font-size:15px">Delete</button>
+      </form>
     </div>
+
+  </div>
+
+
     <a href="/">Back to All Messages</a>
   </body>
 </html>

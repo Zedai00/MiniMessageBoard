@@ -3,27 +3,29 @@ body {
   margin: 40px auto;
   max-width: 600px;
   padding: 0 20px;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #1e1e1e;
+  color: #f1f1f1;
 }
 
 h1 {
-  color: #222;
-  border-bottom: 2px solid #555;
+  color: #ffffff;
+  border-bottom: 2px solid #444;
   padding-bottom: 10px;
 }
 
 form {
-  background-color: #fff;
+  background-color: #2c2c2c;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  margin-bottom: 15px;
 }
 
 label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
+  color: #f1f1f1;
 }
 
 input[type="text"] {
@@ -32,53 +34,101 @@ input[type="text"] {
   margin-top: 5px;
   box-sizing: border-box;
   border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #0077cc;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #005fa3;
+  border: 1px solid #555;
+  background-color: #1e1e1e;
+  color: #f1f1f1;
 }
 
 .message {
-  background-color: #fff;
+  background-color: #2c2c2c;
   margin-bottom: 20px;
   padding: 15px;
   border-left: 5px solid #0077cc;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
 }
 
 a {
-  display: inline-block;
-  margin-top: 20px;
   text-decoration: none;
-  color: #0077cc;
+  color: #4dabf7;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* === Buttons === */
+button,
 a.button {
   display: inline-block;
-  background-color: #0077cc;
-  color: white;
-  padding: 6px 12px;
+  padding: 8px 16px;
   margin-top: 10px;
-  border-radius: 4px;
-  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
 
-a.button:hover {
+/* Primary button */
+button[type="submit"],
+.button.primary {
+  background-color: #0077cc;
+  color: white;
+}
+
+button[type="submit"]:hover,
+.button.primary:hover {
   background-color: #005fa3;
+}
+
+/* Delete button */
+.delete-button {
+  background-color: #cc0000;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #990000;
+}
+
+/* Edit button */
+.button.edit {
+  background-color: #0077cc;
+  color: white;
+}
+
+.button.edit:hover {
+  background-color: #cc8800;
+}
+
+/* Align Edit and Delete inline */
+.message form,
+.message a.button {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Remove box-shadow from Delete button form */
+.message form {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  border: none;
+}
+.message-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.message-buttons form {
+  margin: 0; /* remove spacing caused by block form */
+}
+@media (max-width: 500px) {
+  .message-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
