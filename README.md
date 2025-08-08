@@ -2,6 +2,10 @@
 
 A minimal message board web app built using **Node.js**, **Express**, and **EJS**.
 
+### 🌐 Live Demo
+
+👉 [Visit Live App](https://minimessageboard-9d5t.onrender.com/)
+
 ## 🚀 Features
 
 - Post a new message with author and text
